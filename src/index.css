@@ -1,0 +1,126 @@
+@import "tailwindcss";
+
+/* Leaflet tooltip tag styling for cafe hover */
+.cafe-tooltip {
+  background: white;
+  color: #111827; /* gray-900 */
+  border: 1px solid rgba(0,0,0,0.06);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  border-radius: 9999px; /* pill */
+  padding: 4px 10px;
+  font-size: 12px;
+  font-weight: 500;
+}
+.cafe-tooltip:before {
+  display: none; /* hide default arrow */
+}
+
+/* Bounce animation for selected emoji marker */
+@keyframes croissant-bounce {
+  0% { transform: translateY(0) scale(1); }
+  40% { transform: translateY(-6px) scale(1.05); }
+  60% { transform: translateY(0) scale(1); }
+  80% { transform: translateY(-3px) scale(1.02); }
+  100% { transform: translateY(0) scale(1); }
+}
+.emoji-pin-selected .emoji-ico {
+  animation: croissant-bounce 350ms ease-out;
+}
+
+/* Audio status icon styling */
+.audio-status-icon {
+  pointer-events: none;
+  z-index: 1000;
+}
+
+.audio-status-icon div {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  border: 2px solid white;
+}
+
+/* Hand-drawn aesthetic enhancements */
+.leaflet-container {
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+/* Ultra-small screen tweaks */
+@media (max-width: 389px) {
+  .title-full { display: none; }
+  .title-compact { display: inline; }
+  .hide-under-390 { display: none !important; }
+}
+@media (min-width: 390px) {
+  .title-full { display: inline; }
+  .title-compact { display: none; }
+}
+
+/* Softer, more approachable button styling */
+button {
+  border-radius: 8px;
+  transition: all 0.2s ease;
+}
+
+button:hover {
+  transform: translateY(-1px);
+}
+
+/* Side panel styling with clean, modern feel */
+.side-panel {
+  border-radius: 16px 0 0 16px;
+  box-shadow: -4px 0 20px rgba(0, 0, 0, 0.08);
+  border-left: 1px solid var(--color-border-light);
+}
+
+/* Bottom panel styling */
+.bottom-panel {
+  border-radius: 16px 16px 0 0;
+  box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.08);
+  border-top: 1px solid var(--color-border-light);
+}
+
+/* Input field styling */
+input, select {
+  border-radius: 8px;
+  border: 2px solid var(--color-border-light);
+  transition: all 0.2s ease;
+}
+
+input:focus, select:focus {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px rgba(51, 51, 153, 0.1);
+}
+
+/* List item styling */
+.list-item {
+  display: block;
+  list-style: none;
+  border-radius: 12px;
+  transition: all 0.2s ease;
+  border: 1px solid var(--color-border-light);
+}
+
+.list-item:hover {
+  transform: translateX(2px);
+  border-color: var(--color-border-medium);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+/* Utility: prevent hover translate for specific controls */
+.no-translate-hover {
+  transform: none !important;
+  transition: none !important;
+}
+.no-translate-hover:hover {
+  transform: none !important;
+}
+
+/* External link icon uses mask to inherit current text color */
+.icon-external {
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+  background-color: currentColor;
+  -webkit-mask: url('/external-link-svgrepo-com.svg') no-repeat center / contain;
+  mask: url('/external-link-svgrepo-com.svg') no-repeat center / contain;
+}
