@@ -449,12 +449,12 @@ function MapView() {
     })
 
     // Initialize audio
-    audioRef.current = new Audio('/Operation Pastry.mp3')
+  audioRef.current = new Audio('operation-pastry.mp3')
     audioRef.current.loop = true
     
     // Add a clickable Xero office marker with audio functionality
     const xeroIcon = L.icon({
-      iconUrl: '/xero-office.png',
+  iconUrl: 'xero_office.png',
       iconSize: [24, 24],
       iconAnchor: [12, 12],
       className: 'xero-pin',
