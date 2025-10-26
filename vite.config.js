@@ -4,5 +4,5 @@ import react from '@vitejs/plugin-react'
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react()],
-  base: '/operation-pastry/', // Set base for GitHub Pages
+  base: '/', // Set base for GitHub Pages
 })
