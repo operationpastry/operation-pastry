@@ -449,7 +449,7 @@ function MapView() {
     })
 
     // Initialize audio
-  audioRef.current = new Audio('operation-pastry.mp3')
+  audioRef.current = new Audio('Operation_Pastry.mp3')
     audioRef.current.loop = true
     
     // Add a clickable Xero office marker with audio functionality
